@@ -3,18 +3,18 @@
 #include <string.h>
 #include "STD.h"
 
-extern ST* Creat(ST*);                        //å½•å…¥å­¦ç”Ÿä¿¡æ¯
-extern ST* Chang(ST*,char[]);                 //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
-extern void Add(ST*);                          //å¢åŠ å­¦ç”Ÿä¿¡æ¯
-extern ST* Cut(ST*,char[]);                   //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
-extern void Find_name(ST*,char[]);            //æŒ‰å§“åæŸ¥è¯¢
-extern void Find_class(ST*,char[]);           //æŒ‰ç­çº§æŸ¥è¯¢
-extern void Find_num(ST*,char[]);             //æŒ‰å­¦å·æŸ¥è¯¢
-extern void Find_sub(ST*,char[]);             //æŒ‰è¯¾ç¨‹åç§°æŸ¥è¯¢
-extern void Find_grate(ST*,char[]);           //æŸ¥è¯¢ç­çº§ä¼˜ç§€ç‡
-extern void Find_faul(ST*head,char cla[]);    //æŸ¥è¯¢ç­çº§ä¸åŠæ ¼ç‡
-extern void Sort_sum(ST*);                    //æŒ‰æ€»åˆ†é«˜ä½æ’åº
-extern void Sort_sub(ST*,char[]);             //å•ç§‘æˆç»©æ’å
+extern ST* Creat(ST*);                        //Â¼ÈëÑ§ÉúĞÅÏ¢
+extern ST* Chang(ST*,char[]);                 //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
+extern void Add(ST*);                          //Ôö¼ÓÑ§ÉúĞÅÏ¢
+extern ST* Cut(ST*,char[]);                   //É¾³ıÑ§ÉúĞÅÏ¢
+extern void Find_name(ST*,char[]);            //°´ĞÕÃû²éÑ¯
+extern void Find_class(ST*,char[]);           //°´°à¼¶²éÑ¯
+extern void Find_num(ST*,char[]);             //°´Ñ§ºÅ²éÑ¯
+extern void Find_sub(ST*,char[]);             //°´¿Î³ÌÃû³Æ²éÑ¯
+extern void Find_grate(ST*,char[]);           //²éÑ¯°à¼¶ÓÅĞãÂÊ
+extern void Find_faul(ST*head,char cla[]);    //²éÑ¯°à¼¶²»¼°¸ñÂÊ
+extern void Sort_sum(ST*);                    //°´×Ü·Ö¸ßµÍÅÅĞò
+extern void Sort_sub(ST*,char[]);             //µ¥¿Æ³É¼¨ÅÅÃû
 
 
 //void Menu();
@@ -29,124 +29,124 @@ int main()
 	while(1)
 	{
 		system("CLS");
-        printf("|********************å­¦ç”Ÿç®¡ç†ç³»ç»Ÿ***********************|\n");
+        printf("|********************Ñ§Éú¹ÜÀíÏµÍ³***********************|\n");
         printf("|                                                       |\n");
-        printf("|                 1  è¾“å…¥å­¦ç”Ÿä¿¡æ¯                       |\n");
-        printf("|                 2  ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯                       |\n");
-        printf("|                 3  å¢åŠ å­¦ç”Ÿä¿¡æ¯                       |\n");
-        printf("|                 4  åˆ é™¤å­¦ç”Ÿä¿¡æ¯                       |\n");
-        printf("|                 5  æŒ‰å§“åæŸ¥è¯¢                         |\n");
-        printf("|                 6  æŒ‰ç­çº§æŸ¥è¯¢                         |\n");
-        printf("|                 7  æŒ‰å­¦å·æŸ¥è¯¢                         |\n");
-        printf("|                 8  æŒ‰è¯¾ç¨‹åç§°æŸ¥è¯¢                     |\n");
-        printf("|                 9  æŒ‰æ€»åˆ†ä»é«˜ä½æ’åº                   |\n");
-        printf("|                10  å•ç§‘æˆç»©æ’å                       |\n");
-        printf("|                11  æŸ¥è¯¢ç­çº§ä¼˜ç§€ç‡                     |\n");
-		printf("|                12  æŸ¥è¯¢ç­çº§ä¸åŠæ ¼ç‡                   |\n");
-        printf("|                13  é€€å‡ºç³»ç»Ÿ                           |\n");
+        printf("|                 1  ÊäÈëÑ§ÉúĞÅÏ¢                       |\n");
+        printf("|                 2  ĞŞ¸ÄÑ§ÉúĞÅÏ¢                       |\n");
+        printf("|                 3  Ôö¼ÓÑ§ÉúĞÅÏ¢                       |\n");
+        printf("|                 4  É¾³ıÑ§ÉúĞÅÏ¢                       |\n");
+        printf("|                 5  °´ĞÕÃû²éÑ¯                         |\n");
+        printf("|                 6  °´°à¼¶²éÑ¯                         |\n");
+        printf("|                 7  °´Ñ§ºÅ²éÑ¯                         |\n");
+        printf("|                 8  °´¿Î³ÌÃû³Æ²éÑ¯                     |\n");
+        printf("|                 9  °´×Ü·Ö´Ó¸ßµÍÅÅĞò                   |\n");
+        printf("|                10  µ¥¿Æ³É¼¨ÅÅÃû                       |\n");
+        printf("|                11  ²éÑ¯°à¼¶ÓÅĞãÂÊ                     |\n");
+		printf("|                12  ²éÑ¯°à¼¶²»¼°¸ñÂÊ                   |\n");
+        printf("|                13  ÍË³öÏµÍ³                           |\n");
         printf("|                                                       |\n");
         printf("|*******************************************************|\n");
-        printf("è¯·è¾“å…¥æ“ä½œæ•°ï¼š");
+        printf("ÇëÊäÈë²Ù×÷Êı£º");
         scanf("%d",&a);
         switch(a)
         {
-        case 1:  //è¾“å…¥å­¦ç”Ÿä¿¡æ¯
+        case 1:  //ÊäÈëÑ§ÉúĞÅÏ¢
             {
                 head=Creat(head);
                 break;
             }
-        case 2:  //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
+        case 2:  //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
             {
 				system("CLS");
-				printf("è¯·è¾“å…¥ä½ æƒ³ä¿®æ”¹çš„å­¦ç”Ÿçš„å­¦å·ï¼š");
+				printf("ÇëÊäÈëÄãÏëĞŞ¸ÄµÄÑ§ÉúµÄÑ§ºÅ£º");
 				fflush(stdin);
 				gets(num);
 				head=Chang(head,num);
 				break;
             }
-        case 3:  //å¢åŠ å­¦ç”Ÿä¿¡æ¯
+        case 3:  //Ôö¼ÓÑ§ÉúĞÅÏ¢
         {
 			system("CLS");
             Add(head);
             break;
         }
-        case 4:  //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
+        case 4:  //É¾³ıÑ§ÉúĞÅÏ¢
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³åˆ é™¤çš„å­¦ç”Ÿçš„å­¦å·ï¼š");
+			    printf("ÇëÊäÈëÄãÏëÉ¾³ıµÄÑ§ÉúµÄÑ§ºÅ£º");
 			    fflush(stdin);
 				gets(num);
 				head=Cut(head,num);
 				break;
 			}
-        case 5:   //æŒ‰å§“åæŸ¥è¯¢
+        case 5:   //°´ĞÕÃû²éÑ¯
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„å§“åï¼š");
+			    printf("ÇëÊäÈëÄãÏë²éÑ¯µÄĞÕÃû£º");
 			    fflush(stdin);
 				gets(nam);
 				Find_name(head,nam);
 				break;
 			}
-        case 6:   //æŒ‰ç­çº§æŸ¥è¯¢
+        case 6:   //°´°à¼¶²éÑ¯
 			{
 				system("CLS");
-                printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„ç­çº§ï¼š");
+                printf("ÇëÊäÈëÄãÏë²éÑ¯µÄ°à¼¶£º");
 			    fflush(stdin);
-				gets(cla);   
+				gets(cla);
 				Find_class(head,cla);
 				break;
 			}
-        case 7:   //æŒ‰å­¦å·æŸ¥è¯¢
+        case 7:   //°´Ñ§ºÅ²éÑ¯
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„å­¦å·ï¼š");
+			    printf("ÇëÊäÈëÄãÏë²éÑ¯µÄÑ§ºÅ£º");
 			    fflush(stdin);
 			    gets(num);
 				Find_num(head,num);
 				break;
 			}
-		case 8:   //æŒ‰è¯¾ç¨‹åç§°æŸ¥è¯¢
+		case 8:   //°´¿Î³ÌÃû³Æ²éÑ¯
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„è¯¾ç¨‹åç§°ï¼š");
+			    printf("ÇëÊäÈëÄãÏë²éÑ¯µÄ¿Î³ÌÃû³Æ£º");
 			    fflush(stdin);
 			    gets(sub);
 				Find_sub(head,sub);
 				break;
 			}
-		case 9:   //æŒ‰æ€»åˆ†é«˜ä½æ’åº
+		case 9:   //°´×Ü·Ö¸ßµÍÅÅĞò
 			{
 				Sort_sum(head);
 				break;
 			}
-		case 10:   //å•ç§‘æˆç»©æ’å
+		case 10:   //µ¥¿Æ³É¼¨ÅÅÃû
 			{
-				printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢æ’åçš„ç§‘ç›®ï¼š");
+				printf("ÇëÊäÈëÄãÏë²éÑ¯ÅÅÃûµÄ¿ÆÄ¿£º");
 				fflush(stdin);
 				gets(sub);
 				Sort_sub(head,sub);
 				break;
 			}
-		case 11:  //æŸ¥è¯¢ç­çº§ä¼˜ç§€ç‡
+		case 11:  //²éÑ¯°à¼¶ÓÅĞãÂÊ
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„ç­çº§ï¼š");
+			    printf("ÇëÊäÈëÄãÏë²éÑ¯µÄ°à¼¶£º");
 			    fflush(stdin);
 			    gets(cla);
 				Find_grate(head,cla);
 				break;
 			}
-		case 12:  //æŸ¥è¯¢ç­çº§ä¸åŠæ ¼ç‡
+		case 12:  //²éÑ¯°à¼¶²»¼°¸ñÂÊ
 			{
 				system("CLS");
-			    printf("è¯·è¾“å…¥ä½ æƒ³æŸ¥è¯¢çš„ç­çº§ï¼š");
+			    printf("ÇëÊäÈëÄãÏë²éÑ¯µÄ°à¼¶£º");
 			    fflush(stdin);
 			    gets(cla);
 				Find_faul(head,cla);
 				break;
 			}
-		case 13:  //é€€å‡ºç³»ç»Ÿ
+		case 13:  //ÍË³öÏµÍ³
 			{
 				system("pause");
 				return 0;

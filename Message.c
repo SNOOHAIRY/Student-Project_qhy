@@ -3,9 +3,9 @@
 #include <string.h>
 #include "STD.h"
 
-void file(ST*);         //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+void file(ST*);         //½«ĞÅÏ¢´æÈëÎÄ¼ş
 
-ST* Creat(ST* head)     //å½•å…¥å­¦ç”Ÿä¿¡æ¯
+ST* Creat(ST* head)     //Â¼ÈëÑ§ÉúĞÅÏ¢
 {
 	ST *curr,*p;
 	int usgoal,exgoal,age,i;
@@ -13,8 +13,8 @@ ST* Creat(ST* head)     //å½•å…¥å­¦ç”Ÿä¿¡æ¯
 	float ratio,sugoal,sum;
 	system("CLS");
 	head=curr=NULL;
-	printf("è¯·è¾“å…¥å­¦ç”Ÿä¿¡æ¯ï¼Œä»¥0ç»“æŸ\n");
-	printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å­¦å·ï¼š");
+	printf("ÇëÊäÈëÑ§ÉúĞÅÏ¢£¬ÒÔ0½áÊø\n");
+	printf("ÇëÊäÈëÑ§ÉúµÄÑ§ºÅ£º");
 	getchar();
 	gets(num);
 	while(strcmp(num,"0")!=0)
@@ -22,54 +22,54 @@ ST* Creat(ST* head)     //å½•å…¥å­¦ç”Ÿä¿¡æ¯
 		
 		p=(ST*) malloc(sizeof(ST));
 		strcpy(p->num,num);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å§“åï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄĞÕÃû£º");
 		gets(nam);
 		strcpy(p->nam,nam);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„ç­çº§ï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄ°à¼¶£º");
 		gets(cla);
 		strcpy(p->cla,cla);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å¹´é¾„ï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄÄêÁä£º");
 		scanf("%d",&age);
 		p->age=age;
 		sum=0;
 		for(i=0;i<4;i++)
 		{
-			printf("è¯·è¾“å…¥å­¦ç”Ÿçš„ç¬¬%dé—¨è¯¾ç¨‹çš„ä¿¡æ¯ï¼š\n",i+1);
-			printf("è¯·è¾“å…¥è¯¾ç¨‹çš„åç§°ï¼š");
+			printf("ÇëÊäÈëÑ§ÉúµÄµÚ%dÃÅ¿Î³ÌµÄĞÅÏ¢£º\n",i+1);
+			printf("ÇëÊäÈë¿Î³ÌµÄÃû³Æ£º");
 			getchar();
 			gets(nam);
-			strcpy(p->sub[i].sub_nam,nam);                  //è¯¾ç¨‹çš„åç§°
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„å¹³æ—¶æˆç»©ï¼š");
+			strcpy(p->sub[i].sub_nam,nam);                  //¿Î³ÌµÄÃû³Æ
+			printf("ÇëÊäÈë¸Ã¿Î³ÌÑ§ÉúµÄÆ½Ê±³É¼¨£º");
 			scanf("%d",&usgoal);
-			p->sub[i].usgoal=usgoal;                        //è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„å¹³æ—¶æˆç»©
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„è€ƒè¯•æˆç»©ï¼š");
+			p->sub[i].usgoal=usgoal;                        //¸Ã¿Î³ÌÑ§ÉúµÄÆ½Ê±³É¼¨
+			printf("ÇëÊäÈë¸Ã¿Î³ÌÑ§ÉúµÄ¿¼ÊÔ³É¼¨£º");
 			scanf("%d",&exgoal);
-			p->sub[i].exgoal=exgoal;                        //è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„è€ƒè¯•æˆç»©
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹è€ƒè¯•æˆç»©æ‰€å çš„æ¯”ä¾‹ï¼š");
+			p->sub[i].exgoal=exgoal;                        //¸Ã¿Î³ÌÑ§ÉúµÄ¿¼ÊÔ³É¼¨
+			printf("ÇëÊäÈë¸Ã¿Î³Ì¿¼ÊÔ³É¼¨ËùÕ¼µÄ±ÈÀı£º");
 			scanf("%f",&ratio);    
-			p->sub[i].ratio=ratio;                          //è¯¥è¯¾ç¨‹è€ƒè¯•æˆç»©æ‰€å çš„æ¯”ä¾‹
-			sugoal=exgoal*ratio+(1-ratio)*usgoal;           //æ ¹æ®æ¯”ä¾‹ç®—å‡ºæ€»è¯„æˆç»©
+			p->sub[i].ratio=ratio;                          //¸Ã¿Î³Ì¿¼ÊÔ³É¼¨ËùÕ¼µÄ±ÈÀı
+			sugoal=exgoal*ratio+(1-ratio)*usgoal;           //¸ù¾İ±ÈÀıËã³ö×ÜÆÀ³É¼¨
 			p->sub[i].sugoal=sugoal;
-			sum+=sugoal;                                    //ç®—å‡ºå­¦ç”Ÿæ‰€æœ‰ç§‘ç›®çš„æ€»æˆç»©
+			sum+=sugoal;                                    //Ëã³öÑ§ÉúËùÓĞ¿ÆÄ¿µÄ×Ü³É¼¨
 		}
 		p->sum=sum;                                         
-		/*å»ºç«‹é“¾è¡¨*/ 
+		/*½¨Á¢Á´±í*/ 
 		if(head==NULL) head=p;
 		else curr->node=p;
 		curr=p;
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å­¦å·ï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄÑ§ºÅ£º");
 		getchar();
 		gets(num);
 	}
 	curr->node=NULL;
-	file(head);  //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+	file(head);  //½«ĞÅÏ¢´æÈëÎÄ¼ş
 	system("pause");
 	return(head);
 //	free(fp);
 }
 
 
-ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
+ST* Chang(ST*head,char num[])   //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
 {
 	ST *p;
 	int i,j,age,flag=0,usgoal,exgoal,nod=1;
@@ -88,7 +88,7 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 	}
 	if(!flag) 
 	{
-		printf("æ²¡æœ‰æ‰¾åˆ°å¯¹åº”çš„å­¦å·\n");
+		printf("Ã»ÓĞÕÒµ½¶ÔÓ¦µÄÑ§ºÅ\n");
 		system("pause");
 	}
 		else
@@ -96,22 +96,22 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 	while(flag)
 	{
 		system("CLS");
-	    printf("|*************è¯·è¾“å…¥ä½ æƒ³ä¿®æ”¹çš„ä¿¡æ¯**********************|\n");
+	    printf("|*************ÇëÊäÈëÄãÏëĞŞ¸ÄµÄĞÅÏ¢**********************|\n");
         printf("|                                                       |\n");
-        printf("|                 1  å­¦å·                               |\n");
-        printf("|                 2  å§“å                               |\n");
-        printf("|                 3  ç­çº§                               |\n");
-        printf("|                 4  å¹´é¾„                               |\n");
-        printf("|                 5  æˆç»©                               |\n");
+        printf("|                 1  Ñ§ºÅ                               |\n");
+        printf("|                 2  ĞÕÃû                               |\n");
+        printf("|                 3  °à¼¶                               |\n");
+        printf("|                 4  ÄêÁä                               |\n");
+        printf("|                 5  ³É¼¨                               |\n");
         printf("|                                                       |\n");
         printf("|*******************************************************|\n");
-		printf("è¯·è¾“å…¥ä½ çš„æ“ä½œæ•°ï¼š");
+		printf("ÇëÊäÈëÄãµÄ²Ù×÷Êı£º");
 		scanf("%d",&i);
 		switch(i)
 		{
 			case 1:
 			{
-				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„å­¦å·ï¼š");
+				printf("ÇëÊäÈëĞŞ¸ÄºóµÄÑ§ºÅ£º");
 				fflush(stdin);
 				scanf("%s",cnum);
 				strcpy(p->num,cnum);
@@ -119,7 +119,7 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 			}
 			case 2:
 			{
-				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„å§“åï¼š");
+				printf("ÇëÊäÈëĞŞ¸ÄºóµÄĞÕÃû£º");
 				fflush(stdin);
 				scanf("%s",nam);
 				strcpy(p->nam,nam);
@@ -127,7 +127,7 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 			}
 			case 3:
 			{
-				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„ç­çº§ï¼š");
+				printf("ÇëÊäÈëĞŞ¸ÄºóµÄ°à¼¶£º");
 				fflush(stdin);
 				scanf("%s",cla);
 				strcpy(p->cla,cla);
@@ -135,14 +135,14 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 			}
 			case 4:
 			{
-				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„å¹´é¾„ï¼š");
+				printf("ÇëÊäÈëĞŞ¸ÄºóµÄÄêÁä£º");
 				scanf("%d",&age);
 				p->age=age;
 				break;
 			}
 			case 5:
 			{
-				printf("è¯·è¾“å…¥ä½ æƒ³ä¿®æ”¹çš„è¯¾ç¨‹åç§°ï¼š");
+				printf("ÇëÊäÈëÄãÏëĞŞ¸ÄµÄ¿Î³ÌÃû³Æ£º");
 				fflush(stdin);
 				scanf("%s",nam);
 				for(i=0;i<4;i++)
@@ -154,21 +154,21 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 						{
 							system("CLS");
 							age=1;
-							printf("|*************è¯·è¾“å…¥ä½ æƒ³ä¿®æ”¹çš„æˆç»©ä¿¡æ¯******************|\n");
+							printf("|*************ÇëÊäÈëÄãÏëĞŞ¸ÄµÄ³É¼¨ĞÅÏ¢******************|\n");
 							printf("|                                                       |\n");
-							printf("|                 1  ç§‘ç›®åç§°                           |\n");
-							printf("|                 2  ç§‘ç›®å¹³æ—¶æˆç»©                       |\n");
-							printf("|                 3  ç§‘ç›®è€ƒè¯•æˆç»©                       |\n");
-							printf("|                 4  ç§‘ç›®è€ƒè¯•æˆç»©å æ¯”                   |\n");
+							printf("|                 1  ¿ÆÄ¿Ãû³Æ                           |\n");
+							printf("|                 2  ¿ÆÄ¿Æ½Ê±³É¼¨                       |\n");
+							printf("|                 3  ¿ÆÄ¿¿¼ÊÔ³É¼¨                       |\n");
+							printf("|                 4  ¿ÆÄ¿¿¼ÊÔ³É¼¨Õ¼±È                   |\n");
 							printf("|                                                       |\n");
 							printf("|*******************************************************|\n");
-							printf("è¯·è¾“å…¥æ“ä½œæ•°ï¼š");
+							printf("ÇëÊäÈë²Ù×÷Êı£º");
 							scanf("%d",&j);
 							switch(j)
 							{
 							case 1:
 								{
-									printf("è¯·è¾“å…¥ä¿®æ”¹ä¹‹åçš„åç§°ï¼š");
+									printf("ÇëÊäÈëĞŞ¸ÄÖ®ºóµÄÃû³Æ£º");
 									fflush(stdin);
 									scanf("%s",cgnam);
 									strcpy(p->sub[i].sub_nam,cgnam);
@@ -176,10 +176,10 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 								}
 							case 2:
 								{
-									printf("è¯·è¾“å…¥ä¿®æ”¹åçš„å¹³æ—¶æˆç»©");
+									printf("ÇëÊäÈëĞŞ¸ÄºóµÄÆ½Ê±³É¼¨");
 									scanf("%d",usgoal);
-									p->sum-=p->sub[i].sugoal;                                   //è®¡ç®—ä¿®æ”¹æ€»è¯„æˆç»©
-									p->sub[i].sugoal-=(p->sub[i].usgoal)*(1-p->sub[i].ratio);   //è®¡ç®—ä¿®æ”¹è¿™é—¨è¯¾ç¨‹çš„æ€»è¯„æˆç»©
+									p->sum-=p->sub[i].sugoal;                                   //¼ÆËãĞŞ¸Ä×ÜÆÀ³É¼¨
+									p->sub[i].sugoal-=(p->sub[i].usgoal)*(1-p->sub[i].ratio);   //¼ÆËãĞŞ¸ÄÕâÃÅ¿Î³ÌµÄ×ÜÆÀ³É¼¨
   									p->sub[i].sugoal+=usgoal*(1-p->sub[i].ratio);
 									p->sub[i].usgoal=usgoal;
 									p->sum+=p->sub[i].sugoal;
@@ -187,10 +187,10 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 								}
 							case 3:
 								{
-									printf("è¯·è¾“å…¥ä¿®æ”¹åçš„è€ƒè¯•æˆç»©");
+									printf("ÇëÊäÈëĞŞ¸ÄºóµÄ¿¼ÊÔ³É¼¨");
 									scanf("%d",exgoal);
-									p->sum-=p->sub[i].sugoal;                                   //è®¡ç®—ä¿®æ”¹æ€»è¯„æˆç»©
-									p->sub[i].sugoal-=(p->sub[i].exgoal)*(p->sub[i].ratio);     //è®¡ç®—ä¿®æ”¹è¿™é—¨è¯¾ç¨‹çš„æ€»è¯„æˆç»©
+									p->sum-=p->sub[i].sugoal;                                   //¼ÆËãĞŞ¸Ä×ÜÆÀ³É¼¨
+									p->sub[i].sugoal-=(p->sub[i].exgoal)*(p->sub[i].ratio);     //¼ÆËãĞŞ¸ÄÕâÃÅ¿Î³ÌµÄ×ÜÆÀ³É¼¨
 									p->sub[i].sugoal+=exgoal*(p->sub[i].ratio);
 									p->sum+=p->sub[i].sugoal;
 									p->sub[i].exgoal=exgoal;
@@ -198,18 +198,18 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 								}
 							case 4:
 								{
-									printf("è¯·è¾“å…¥ä¿®æ”¹åçš„æˆç»©å æ¯”");
+									printf("ÇëÊäÈëĞŞ¸ÄºóµÄ³É¼¨Õ¼±È");
 									scanf("%f",&ratio);
-									p->sum-=p->sub[i].sugoal;                                   //è®¡ç®—ä¿®æ”¹æ€»è¯„æˆç»©
-									p->sub[i].sugoal-=p->sub[i].sugoal;                         //è®¡ç®—ä¿®æ”¹è¿™é—¨è¯¾ç¨‹çš„æ€»è¯„æˆç»©
+									p->sum-=p->sub[i].sugoal;                                   //¼ÆËãĞŞ¸Ä×ÜÆÀ³É¼¨
+									p->sub[i].sugoal-=p->sub[i].sugoal;                         //¼ÆËãĞŞ¸ÄÕâÃÅ¿Î³ÌµÄ×ÜÆÀ³É¼¨
 									p->sub[i].sugoal=(p->sum)+(p->sub[i].exgoal*ratio)+(p->sub[i].usgoal)*(1-ratio);
 									p->sub[i].ratio=ratio;
 									p->sum+=p->sub[i].sugoal;
 									break;
 								}
-							default: printf("è¾“å…¥æ“ä½œæ•°é”™è¯¯ï¼");
+							default: printf("ÊäÈë²Ù×÷Êı´íÎó£¡");
 							}
-							printf("ä¿®æ”¹æˆåŠŸï¼\næ˜¯å¦ç»§ç»­ä¿®æ”¹ï¼šæ˜¯1 å¦0:");
+							printf("ĞŞ¸Ä³É¹¦£¡\nÊÇ·ñ¼ÌĞøĞŞ¸Ä£ºÊÇ1 ·ñ0:");
 							scanf("%d",&nod);
 							system("pause");
 						}
@@ -217,20 +217,20 @@ ST* Chang(ST*head,char num[])   //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 					}
 				}
 			
-				if(age)  printf("ä¿®æ”¹æˆåŠŸï¼\n");
-				else  printf("è¯·è¾“å…¥æ­£ç¡®çš„è¯¾ç¨‹åç§°ï¼");
+				if(age)  printf("ĞŞ¸Ä³É¹¦£¡\n");
+				else  printf("ÇëÊäÈëÕıÈ·µÄ¿Î³ÌÃû³Æ£¡");
 			}
-			default: 	printf("è¾“å…¥æ“ä½œæ•°é”™è¯¯ï¼");
+			default: 	printf("ÊäÈë²Ù×÷Êı´íÎó£¡");
 		}
-		printf("æ˜¯å¦ç»§ç»­ä¿®æ”¹ï¼ˆæ˜¯ 1ï¼Œå¦ 0ï¼‰ï¼š");
+		printf("ÊÇ·ñ¼ÌĞøĞŞ¸Ä£¨ÊÇ 1£¬·ñ 0£©£º");
 		scanf("%d",&flag);
 		}
 	}
-	file(head);        //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+	file(head);        //½«ĞÅÏ¢´æÈëÎÄ¼ş
 	return(head);
 }
 
-ST* Cut(ST*head,char num[])   //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
+ST* Cut(ST*head,char num[])   //É¾³ıÑ§ÉúĞÅÏ¢
 {
     ST *t,*p;
 	int flag=0,cont=0;
@@ -250,7 +250,7 @@ ST* Cut(ST*head,char num[])   //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
 	}
 	if(!flag) 
 	{
-		printf("æ²¡æœ‰æ‰¾åˆ°å¯¹åº”çš„å­¦å·\n");
+		printf("Ã»ÓĞÕÒµ½¶ÔÓ¦µÄÑ§ºÅ\n");
 		system("pause");
 	}
 	else
@@ -258,23 +258,23 @@ ST* Cut(ST*head,char num[])   //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
 		t=p;
 		p=t->node;
 		free(t);
-		printf("åˆ é™¤æˆåŠŸï¼\n");
+		printf("É¾³ı³É¹¦£¡\n");
 		system("pause");
 	}
-	if(!cont)   //åˆ¤æ–­åˆ é™¤çš„æ˜¯å¦æ˜¯å¤´èŠ‚ç‚¹
+	if(!cont)   //ÅĞ¶ÏÉ¾³ıµÄÊÇ·ñÊÇÍ·½Úµã
 	{
-		file(p);       //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+		file(p);       //½«ĞÅÏ¢´æÈëÎÄ¼ş
 		return (p);
 	}
 	else
 	{
-		file(head);    //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+		file(head);    //½«ĞÅÏ¢´æÈëÎÄ¼ş
 		return (head);
 	}
 }
 
 
-void Add(ST* head)   //å¢åŠ å­¦ç”Ÿä¿¡æ¯
+void Add(ST* head)   //Ôö¼ÓÑ§ÉúĞÅÏ¢
 {
 	int usgoal,exgoal,age,i,flag=1;
 	char sub[52],num[52],nam[82],cla[52];
@@ -293,68 +293,68 @@ void Add(ST* head)   //å¢åŠ å­¦ç”Ÿä¿¡æ¯
 		t=p;
 		p=p->node;
 		p=(ST*)(malloc)(sizeof(ST));
-		//printf("è¯·è¾“å…¥ä½ æƒ³æ·»åŠ å‡ ä½å­¦ç”Ÿï¼š");
+		//printf("ÇëÊäÈëÄãÏëÌí¼Ó¼¸Î»Ñ§Éú£º");
 		//scanf("%d")
-		printf("è¯·è¾“å…¥ä½ æƒ³æ·»åŠ çš„å­¦ç”Ÿçš„ä¿¡æ¯ï¼š\n");
-		printf("å­¦å·ï¼š");
+		printf("ÇëÊäÈëÄãÏëÌí¼ÓµÄÑ§ÉúµÄĞÅÏ¢£º\n");
+		printf("Ñ§ºÅ£º");
 		fflush(stdin);
 		gets(num);
 		strcpy(p->num,num);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å§“åï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄĞÕÃû£º");
 		gets(nam);
 		strcpy(p->nam,nam);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„ç­çº§ï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄ°à¼¶£º");
 		gets(cla);
 		strcpy(p->cla,cla);
-		printf("è¯·è¾“å…¥å­¦ç”Ÿçš„å¹´é¾„ï¼š");
+		printf("ÇëÊäÈëÑ§ÉúµÄÄêÁä£º");
 		scanf("%d",&age);
 		p->age=age;
 		sum=0;
 		for(i=0;i<4;i++)
 		{
-			printf("è¯·è¾“å…¥å­¦ç”Ÿçš„ç¬¬%dé—¨è¯¾ç¨‹çš„ä¿¡æ¯ï¼š\n",i+1);
-			printf("è¯·è¾“å…¥è¯¾ç¨‹çš„åç§°ï¼š");
+			printf("ÇëÊäÈëÑ§ÉúµÄµÚ%dÃÅ¿Î³ÌµÄĞÅÏ¢£º\n",i+1);
+			printf("ÇëÊäÈë¿Î³ÌµÄÃû³Æ£º");
 			getchar();
 			gets(nam);
-			strcpy(p->sub[i].sub_nam,nam);                  //è¯¾ç¨‹çš„åç§°
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„å¹³æ—¶æˆç»©ï¼š");
+			strcpy(p->sub[i].sub_nam,nam);                  //¿Î³ÌµÄÃû³Æ
+			printf("ÇëÊäÈë¸Ã¿Î³ÌÑ§ÉúµÄÆ½Ê±³É¼¨£º");
 			scanf("%d",&usgoal);
-			p->sub[i].usgoal=usgoal;                //è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„å¹³æ—¶æˆç»©
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„è€ƒè¯•æˆç»©ï¼š");
+			p->sub[i].usgoal=usgoal;                //¸Ã¿Î³ÌÑ§ÉúµÄÆ½Ê±³É¼¨
+			printf("ÇëÊäÈë¸Ã¿Î³ÌÑ§ÉúµÄ¿¼ÊÔ³É¼¨£º");
 			scanf("%d",&exgoal);
-			p->sub[i].exgoal=exgoal;                //è¯¥è¯¾ç¨‹å­¦ç”Ÿçš„è€ƒè¯•æˆç»©
-			printf("è¯·è¾“å…¥è¯¥è¯¾ç¨‹è€ƒè¯•æˆç»©æ‰€å çš„æ¯”ä¾‹ï¼š");
+			p->sub[i].exgoal=exgoal;                //¸Ã¿Î³ÌÑ§ÉúµÄ¿¼ÊÔ³É¼¨
+			printf("ÇëÊäÈë¸Ã¿Î³Ì¿¼ÊÔ³É¼¨ËùÕ¼µÄ±ÈÀı£º");
 			scanf("%f",&ratio);
-			p->sub[i].ratio=ratio;                  //è¯¥è¯¾ç¨‹è€ƒè¯•æˆç»©æ‰€å çš„æ¯”ä¾‹
-			sugoal=exgoal*ratio+(1-ratio)*usgoal;    //æ ¹æ®æ¯”ä¾‹ç®—å‡ºæ€»è¯„æˆç»©
+			p->sub[i].ratio=ratio;                  //¸Ã¿Î³Ì¿¼ÊÔ³É¼¨ËùÕ¼µÄ±ÈÀı
+			sugoal=exgoal*ratio+(1-ratio)*usgoal;    //¸ù¾İ±ÈÀıËã³ö×ÜÆÀ³É¼¨
 			p->sub[i].sugoal=sugoal;
-			sum+=sugoal;                             //ç®—å‡ºæ€»åˆ†
+			sum+=sugoal;                             //Ëã³ö×Ü·Ö
 		}
 		p->sum=sum;
 		t->node=p;
 		p->node=NULL;
-		printf("æ·»åŠ æˆåŠŸï¼\n");
+		printf("Ìí¼Ó³É¹¦£¡\n");
 		system("pause");
-		printf("æ˜¯å¦è¿˜éœ€ç»§ç»­æ·»åŠ ï¼šæ˜¯ 1ï¼Œå¦ 0ï¼š");
+		printf("ÊÇ·ñ»¹Ğè¼ÌĞøÌí¼Ó£ºÊÇ 1£¬·ñ 0£º");
 		scanf("%d",&flag);
 	}
-	file(head);        //å°†ä¿¡æ¯å­˜å…¥æ–‡ä»¶
+	file(head);        //½«ĞÅÏ¢´æÈëÎÄ¼ş
 }
 
 
-void file(ST* head)    //å°†ä¿¡æ¯å½•å…¥æ–‡ä»¶
+void file(ST* head)    //½«ĞÅÏ¢Â¼ÈëÎÄ¼ş
 {
 	int j;
 	ST* p;
 	FILE *fp;
-	p=head;    //å¤´æŒ‡é’ˆèµ‹ç»™p
+	p=head;    //Í·Ö¸Õë¸³¸øp
 	fp=fopen("massage.txt","w");
 	if(!fp)
 	{
 		printf("ERROR!\n");
 		exit(0);
 	}
-	/*å°†æˆç»©è¾“å‡ºåˆ°æ–‡ä»¶é‡Œ*/
+	/*½«³É¼¨Êä³öµ½ÎÄ¼şÀï*/
 	for(;p!=NULL;)  
 	{
 		fprintf(fp,"%s %s %s %d",p->num,p->nam,p->cla,p->age); 
@@ -366,5 +366,5 @@ void file(ST* head)    //å°†ä¿¡æ¯å½•å…¥æ–‡ä»¶
 		fprintf(fp,"\n");
 		p=p->node;
 	}
-	fclose(fp);   //å…³é—­æ–‡ä»¶
+	fclose(fp);   //¹Ø±ÕÎÄ¼ş
 }

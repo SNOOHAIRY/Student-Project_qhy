@@ -3,31 +3,31 @@
 #include <string.h>
 #include "STD.h"
 
-void Find_name(ST*head,char nam[])  //æŒ‰å§“åæŸ¥æ‰¾
+void Find_name(ST*head,char nam[])  //°´ÐÕÃû²éÕÒ
 {
 	int j,flag=0;
 	ST *p;
 	p=head;
 	for(;p!=NULL;)
 	{
-		if(strcmp(nam,p->nam)==0)   //å§“åå¯èƒ½ä¼šå‡ºçŽ°ä¸€æ ·çš„ï¼Œæ‰€ä»¥æœç´¢ç›´åˆ°é“¾è¡¨ç»“æŸ
+		if(strcmp(nam,p->nam)==0)   //ÐÕÃû¿ÉÄÜ»á³öÏÖÒ»ÑùµÄ£¬ËùÒÔËÑË÷Ö±µ½Á´±í½áÊø
 		{   
 			flag=1;
-			printf("è¯¥å­¦ç”Ÿçš„ä¿¡æ¯ä¸ºï¼š");
-			printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
+			printf("¸ÃÑ§ÉúµÄÐÅÏ¢Îª£º");
+			printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
 			for(j=0;j<4;j++)
 			{
-				printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-				printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+				printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+				printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
 			}
-			printf("å››é—¨ç§‘ç›®çš„æ€»åˆ†ä¸ºï¼š%f\n",p->sum);
+			printf("ËÄÃÅ¿ÆÄ¿µÄ×Ü·ÖÎª£º%f\n",p->sum);
 		}
 		p=p->node;
 	}
 	if(!flag) printf("The wrong name!\n");
 	system("pause");
 }
-void Find_class(ST*head,char cla[])  //æŒ‰ç­çº§æŸ¥æ‰¾
+void Find_class(ST*head,char cla[])  //°´°à¼¶²éÕÒ
 {
 	int j,flag=0;
 	ST *p;
@@ -36,14 +36,14 @@ void Find_class(ST*head,char cla[])  //æŒ‰ç­çº§æŸ¥æ‰¾
 	{
 		if(strcmp(cla,p->cla)==0) 
 		{
-		//	printf("è¿™ä¸ªç­çº§çš„ä¿¡æ¯ä¸ºï¼š");
-			printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
+		//	printf("Õâ¸ö°à¼¶µÄÐÅÏ¢Îª£º");
+			printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
 			for(j=0;j<4;j++)
 			{
-				printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-				printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+				printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+				printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
 			}
-			printf("å››é—¨ç§‘ç›®çš„æ€»åˆ†ä¸ºï¼š%f\n",p->sum);
+			printf("ËÄÃÅ¿ÆÄ¿µÄ×Ü·ÖÎª£º%f\n",p->sum);
 			flag=1;
 		}
 		p=p->node;
@@ -51,7 +51,7 @@ void Find_class(ST*head,char cla[])  //æŒ‰ç­çº§æŸ¥æ‰¾
 	if(!flag)  printf("The wrong class!\n");
 	system("pause");
 }
-void Find_sub(ST*head,char sub[])     //æŒ‰ç§‘ç›®æŸ¥è¯¢
+void Find_sub(ST*head,char sub[])     //°´¿ÆÄ¿²éÑ¯
 {
 	int j,flag=0;
 	ST *p;
@@ -62,10 +62,10 @@ void Find_sub(ST*head,char sub[])     //æŒ‰ç§‘ç›®æŸ¥è¯¢
 		{
 			if(strcmp(sub,p->sub[j].sub_nam)==0)
 			{
-				printf("è€ƒäº†è¯¥ç§‘ç›®çš„å­¦ç”Ÿä¿¡æ¯ä¸ºï¼š");
-				printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
-				//printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-				printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+				printf("¿¼ÁË¸Ã¿ÆÄ¿µÄÑ§ÉúÐÅÏ¢Îª£º");
+				printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
+				//printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+				printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
 				flag=1;
 			}
 			
@@ -77,7 +77,7 @@ void Find_sub(ST*head,char sub[])     //æŒ‰ç§‘ç›®æŸ¥è¯¢
 
 }
 
-void Find_grate(ST*head,char cla[])  //æŸ¥è¯¢ç­çº§çš„ä¼˜ç§€çŽ‡
+void Find_grate(ST*head,char cla[])  //²éÑ¯°à¼¶µÄÓÅÐãÂÊ
 {
 	int sub1,sub2,sub3,sub4,flag=0;
 	double cout;
@@ -99,16 +99,16 @@ void Find_grate(ST*head,char cla[])  //æŸ¥è¯¢ç­çº§çš„ä¼˜ç§€çŽ‡
 	}
 	if(flag)
 	{
-		printf("è¯¥ç­çº§ç¬¬ä¸€é—¨ç§‘ç›®çš„ä¼˜ç§€çŽ‡ä¸ºï¼š%f\n",sub1/cout);
-		printf("è¯¥ç­çº§ç¬¬äºŒé—¨ç§‘ç›®çš„ä¼˜ç§€çŽ‡ä¸ºï¼š%f\n",sub2/cout);
-		printf("è¯¥ç­çº§ç¬¬ä¸‰é—¨ç§‘ç›®çš„ä¼˜ç§€çŽ‡ä¸ºï¼š%f\n",sub3/cout);
-		printf("è¯¥ç­çº§ç¬¬å››é—¨ç§‘ç›®çš„ä¼˜ç§€çŽ‡ä¸ºï¼š%f\n",sub4/cout);
+		printf("¸Ã°à¼¶µÚÒ»ÃÅ¿ÆÄ¿µÄÓÅÐãÂÊÎª£º%f\n",sub1/cout);
+		printf("¸Ã°à¼¶µÚ¶þÃÅ¿ÆÄ¿µÄÓÅÐãÂÊÎª£º%f\n",sub2/cout);
+		printf("¸Ã°à¼¶µÚÈýÃÅ¿ÆÄ¿µÄÓÅÐãÂÊÎª£º%f\n",sub3/cout);
+		printf("¸Ã°à¼¶µÚËÄÃÅ¿ÆÄ¿µÄÓÅÐãÂÊÎª£º%f\n",sub4/cout);
 	}
 	else printf("The wrong class!\n");
 	system("pause");
 }
 
-void Find_faul(ST*head,char cla[])  //æŸ¥è¯¢ç­çº§çš„ä¸åŠæ ¼çŽ‡
+void Find_faul(ST*head,char cla[])  //²éÑ¯°à¼¶µÄ²»¼°¸ñÂÊ
 {
 	int sub1,sub2,sub3,sub4,flag=0;
 	double cout;
@@ -130,16 +130,16 @@ void Find_faul(ST*head,char cla[])  //æŸ¥è¯¢ç­çº§çš„ä¸åŠæ ¼çŽ‡
 	}
 	if(flag)
 	{
-		printf("è¯¥ç­çº§ç¬¬ä¸€é—¨ç§‘ç›®çš„ä¸åŠæ ¼çŽ‡ä¸ºï¼š%f\n",sub1/cout);
-		printf("è¯¥ç­çº§ç¬¬äºŒé—¨ç§‘ç›®çš„ä¸åŠæ ¼çŽ‡ä¸ºï¼š%f\n",sub2/cout);
-		printf("è¯¥ç­çº§ç¬¬ä¸‰é—¨ç§‘ç›®çš„ä¸åŠæ ¼çŽ‡ä¸ºï¼š%f\n",sub3/cout);
-		printf("è¯¥ç­çº§ç¬¬å››é—¨ç§‘ç›®çš„ä¸åŠæ ¼çŽ‡ä¸ºï¼š%f\n",sub4/cout);
+		printf("¸Ã°à¼¶µÚÒ»ÃÅ¿ÆÄ¿µÄ²»¼°¸ñÂÊÎª£º%f\n",sub1/cout);
+		printf("¸Ã°à¼¶µÚ¶þÃÅ¿ÆÄ¿µÄ²»¼°¸ñÂÊÎª£º%f\n",sub2/cout);
+		printf("¸Ã°à¼¶µÚÈýÃÅ¿ÆÄ¿µÄ²»¼°¸ñÂÊÎª£º%f\n",sub3/cout);
+		printf("¸Ã°à¼¶µÚËÄÃÅ¿ÆÄ¿µÄ²»¼°¸ñÂÊÎª£º%f\n",sub4/cout);
 	}
 	else printf("The wrong class!\n");
 	system("pause");
 }
 
-void Find_num(ST*head,char num[])  //æŒ‰å­¦å·æŸ¥æ‰¾
+void Find_num(ST*head,char num[])  //°´Ñ§ºÅ²éÕÒ
 {
 	int j,flag=0;
 	ST *p;
@@ -149,20 +149,20 @@ void Find_num(ST*head,char num[])  //æŒ‰å­¦å·æŸ¥æ‰¾
 		if(strcmp(num,p->num)==0) 
 		{
 			flag=1;
-			break;                //å­¦å·ä¸ä¼šå‡ºçŽ°ä¸€æ ·çš„ï¼Œæ‰€ä»¥æ‰¾åˆ°å°±ç»“æŸ
+			break;                //Ñ§ºÅ²»»á³öÏÖÒ»ÑùµÄ£¬ËùÒÔÕÒµ½¾Í½áÊø
 		}
 		p=p->node;
 	}
 	if(flag)
 	{
-		printf("è¯¥å­¦ç”Ÿçš„ä¿¡æ¯ä¸ºï¼š");
-		printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
+		printf("¸ÃÑ§ÉúµÄÐÅÏ¢Îª£º");
+		printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
 		for(j=0;j<4;j++)
 		{
-			printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-			printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+			printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+			printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f\n",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
 		}
-		printf("å››é—¨ç§‘ç›®çš„æ€»åˆ†ä¸ºï¼š%f\n",p->sum);
+		printf("ËÄÃÅ¿ÆÄ¿µÄ×Ü·ÖÎª£º%f\n",p->sum);
 	}
 	else printf("The wrong number!\n");
 	system("pause");

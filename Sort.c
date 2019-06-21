@@ -3,7 +3,7 @@
 #include <string.h>
 #include "STD.h"
 
-void Swap(ST *p,ST *q)     //äº¤æ¢å‡½æ•°
+void Swap(ST *p,ST *q)     //½»»»º¯Êý
 {
 	ST t=*p;
 	t.node=q->node;
@@ -12,7 +12,7 @@ void Swap(ST *p,ST *q)     //äº¤æ¢å‡½æ•°
 	*q=t;
 }
 
-void Sort_sum(ST*head)            //æŒ‰æ€»åˆ†ä»Žé«˜åˆ°ä½ŽæŽ’åº
+void Sort_sum(ST*head)            //°´×Ü·Ö´Ó¸ßµ½µÍÅÅÐò
 {
 	ST *p,*t,*max;
 	int j;
@@ -39,16 +39,16 @@ void Sort_sum(ST*head)            //æŒ‰æ€»åˆ†ä»Žé«˜åˆ°ä½ŽæŽ’åº
 	}
 
 	p=head;
-	printf("æŒ‰ç…§æ€»åˆ†æˆç»©é«˜ä½ŽæŽ’åºå¦‚ä¸‹ï¼š\n");
+	printf("°´ÕÕ×Ü·Ö³É¼¨¸ßµÍÅÅÐòÈçÏÂ£º\n");
 	for(;p!=NULL;)
 	{
-		printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
+		printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
 		for(j=0;j<4;j++)
 		{
-			printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-			printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+			printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+			printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
 		}
-		printf("å››é—¨ç§‘ç›®çš„æ€»åˆ†ä¸ºï¼š%f\n",p->sum);
+		printf("ËÄÃÅ¿ÆÄ¿µÄ×Ü·ÖÎª£º%f\n",p->sum);
 		p=p->node;
 	}
 	system("pause");
@@ -57,7 +57,7 @@ void Sort_sum(ST*head)            //æŒ‰æ€»åˆ†ä»Žé«˜åˆ°ä½ŽæŽ’åº
 
 
 
-void Sort_sub(ST*head,char sub[])            //å•ç§‘æˆç»©æŽ’å
+void Sort_sub(ST*head,char sub[])            //µ¥¿Æ³É¼¨ÅÅÃû
 {
 	ST *p,*t,*max,i;
 	int j,flag=0;
@@ -102,13 +102,13 @@ void Sort_sub(ST*head,char sub[])            //å•ç§‘æˆç»©æŽ’å
 		p=p->node;
 	} 
 	p=head;
-	printf("æŒ‰ç…§æ€»åˆ†æˆç»©é«˜ä½ŽæŽ’åºå¦‚ä¸‹ï¼š\n");
+	printf("°´ÕÕ×Ü·Ö³É¼¨¸ßµÍÅÅÐòÈçÏÂ£º\n");
 	for(;p!=NULL;)
 	{
-		printf("å­¦å·ï¼š%s\nå§“åï¼š%s\nç­çº§ï¼š%s\nå¹´é¾„ï¼š%d\n",p->num,p->nam,p->cla,p->age); 
-		printf("ç¬¬%dé—¨çš„è¯¾ç¨‹ï¼š",j+1);
-		printf("è¯¾ç¨‹åç§°ï¼š%s   å¹³æ—¶æˆç»©ï¼š%d   è€ƒè¯•æˆç»©ï¼š%d   è€ƒè¯•æˆç»©å æ¯”ï¼š%f   æ€»åˆ†ï¼š%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
-		printf("å››é—¨ç§‘ç›®çš„æ€»åˆ†ä¸ºï¼š%f\n",p->sum);
+		printf("Ñ§ºÅ£º%s\nÐÕÃû£º%s\n°à¼¶£º%s\nÄêÁä£º%d\n",p->num,p->nam,p->cla,p->age); 
+		printf("µÚ%dÃÅµÄ¿Î³Ì£º",j+1);
+		printf("¿Î³ÌÃû³Æ£º%s   Æ½Ê±³É¼¨£º%d   ¿¼ÊÔ³É¼¨£º%d   ¿¼ÊÔ³É¼¨Õ¼±È£º%f   ×Ü·Ö£º%f  ",p->sub[j].sub_nam,p->sub[j].usgoal,p->sub[j].exgoal,p->sub[j].ratio,p->sub[j].sugoal); 
+		printf("ËÄÃÅ¿ÆÄ¿µÄ×Ü·ÖÎª£º%f\n",p->sum);
 		p=p->node;
 	}
 	system("pause");
